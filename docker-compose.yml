@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  api:
+    build: ./api
+    ports: 
+      - 3000:3000
+    environment:
+      - DB_URL=mongodb://db/groceries
+  db:
+    image: mongo:4.0-xenial
+    ports:
+      - 27017:27017
+    volumes:
+      - groceries:/data/db
+volumes:
+  groceries:

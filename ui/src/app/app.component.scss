@@ -1,0 +1,16 @@
+.list-component {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+    padding: 3em;
+
+    .grocery-list {
+        list-style: none;
+    }
+    
+    .grocery-card {
+        display: flex;
+        justify-content: space-between;
+    }
+}
